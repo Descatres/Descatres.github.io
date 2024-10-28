@@ -138,11 +138,11 @@ body {
 }
 
 .profile-page h1 {
-  font-size: 3rem;
+  font-size: 3.25rem;
 }
 
 .profile-page h3 {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   color: var(--primary-color);
 }
 
