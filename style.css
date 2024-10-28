@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: Poppins, sans-serif;
+}
+
+:root {
+  --bg-color: #393939;
+  --primary-color: #3a96b3;
+  --text-color: #333;
+  --secondary-text-color: #555;
+  --white-color: #fff;
+  --cover-color: linear-gradient(135deg, #2f2f2f, #000);
+  --left-pages-color: linear-gradient(90deg, #dedede, #fff);
+  --right-pages-color: linear-gradient(90deg, #fff, #dedede);
+  --border: 0.125rem solid #2f2f2f;
+  --box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  padding: 0% 2%;
+  color: var(--text-color);
+}
+
+#main {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  max-height: 95vh;
+  aspect-ratio: 90/65;
+  perspective: 4000px;
+  padding: 2rem;
+}
+
+.cover {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: var(--cover-color);
+  box-shadow: var(--box-shadow);
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  transform-origin: left;
+  transition: transform 1s ease, right 1s ease;
+  overflow: hidden;
+}
+
+.main-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: "white-color";
+  opacity: 1;
+}
+.cover-right {
+  z-index: -1;
+}
+.cover-left {
+  z-index: -1;
+}
+
+.open {
+  transform: translateX(50%) rotateY(-180deg);
+}
+
+.turn {
+  transform: rotateY(-180deg);
+}
+
+#main.opened .cover-right {
+  transform: translateX(50%);
+}
+
+.main-cover h1 {
+  transition: opacity 0.4s ease, transform 1s ease;
+  transform: translateY(0);
+}
+
+#main.opened .main-cover h1 {
+  opacity: 0;
+  transform: translateX(-250%) rotate3d(0, 1, 0, 180deg);
+}
+
+.book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  /* transform-origin: right;
+  transition: transform 1s ease, left 1s ease; */
+}
+
+.book .book-page {
+  width: 50%;
+  height: 100%;
+  padding: 5vh 4vh;
+  overflow: hidden;
+}
+
+.page-left {
+  background: var(--left-pages-color);
+  box-shadow: var(--box-shadow);
+}
+
+.page-right {
+  background: var(--right-pages-color);
+  box-shadow: var(--box-shadow);
+}
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.profile-page img {
+  width: 200px;
+  border: 0.125rem solid var(--text-color);
+  object-fit: cover;
+  border-radius: 100%;
+  margin-bottom: 4vh;
+}
+
+.profile-page h1 {
+  font-size: 3rem;
+}
+
+.profile-page h3 {
+  font-size: 1.75rem;
+  color: var(--primary-color);
+}
+
+.profile-page p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  margin-top: 1.5vh;
+}
+
+.social-media a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 0.125rem solid var(--primary-color);
+  border-radius: 100%;
+  transition: color 0.1s ease;
+  color: var(--primary-color);
+  font-size: 2rem;
+  padding: 0.1rem;
+  margin-bottom: 1.75vh;
+}
+
+.social-media i {
+  font-size: 2rem;
+}
+
+.social-media a:hover {
+  border: 0.125rem solid var(--secondary-text-color);
+  color: var(--secondary-text-color);
+}
+
+.social-media a:active {
+  transform: scale(0.98);
+}
+
+.profile-page .btn-box {
+  display: flex;
+  gap: 1.5rem;
+  z-index: 1;
+  margin-top: 2.75vh;
+}
+
+.profile-page .btn-box button {
+  width: 9rem;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  z-index: 300;
+  text-wrap: nowrap;
+}
+
+.profile-page .btn-box button:hover {
+  background: var(--secondary-text-color);
+}
+
+.profile-page .btn-box button:active {
+  transform: scale(0.98);
+}
