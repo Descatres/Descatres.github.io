@@ -88,7 +88,7 @@ body {
   width: 100%;
   height: 100%;
   flex: 1;
-  padding: 2rem 2rem 4rem;
+  padding: 2rem 2rem 3rem;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -120,7 +120,8 @@ body {
   color: var(--primary-color);
 }
 
-.page p {
+.page p,
+li {
   color: var(--secondary-text-color);
 }
 
@@ -224,7 +225,9 @@ but I don't have any place to use it */
 
 /* Experience Page */
 
-.experience-page {
+.experience-page,
+.education-page,
+.latest-proj-page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -240,7 +243,8 @@ but I don't have any place to use it */
   padding: 0 0 5.5%;
 }
 
-.experience-page .content {
+.experience-page .content,
+.education-page .content {
   display: flex;
   height: 100%;
   width: 100%;
@@ -286,14 +290,54 @@ but I don't have any place to use it */
 }
 
 .timeline-content b {
-  color: var(--text-color);
+  color: var(--secondary-text-color);
 }
 
 .timeline-content h3 {
   color: var(--text-color);
 }
 
-.timeline-content h3 a {
+.timeline-content a {
   color: var(--text-color);
   text-decoration: none;
+}
+
+.latest-proj-page img {
+  width: 100%;
+  height: fill-available;
+  border: 0.125rem solid var(--primary-color);
+  border-radius: 2%;
+  align-self: center;
+  margin: 1.5rem 0;
+}
+
+.latest-proj-page .content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1rem;
+  padding: 0 1rem;
+  max-height: 100vh;
+}
+
+.latest-proj-page .content .repo-tittle-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.latest-proj-page .content .repo-tittle-info button {
+  background-color: transparent;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.latest-proj-page .btn-box {
+  margin-top: 2rem;
+}
+#page-last {
+  justify-content: center;
+  color: var(--secondary-text-color);
 }

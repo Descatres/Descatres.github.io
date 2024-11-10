@@ -1,4 +1,5 @@
 import "./style.css";
+
 let currentPage = 1;
 const totalPages = document.querySelectorAll(".page").length;
 
@@ -77,4 +78,45 @@ document.addEventListener("touchend", (event) => {
   if (touchStartX - touchEndX < -50) {
     document.querySelector("#prevButton").click();
   }
+});
+
+document.getElementById("contact-link").addEventListener("click", function (e) {
+  setTimeout(function () {
+    window.open(
+      "https://www.google.com/search?q=send me an email to joaomcatre@hotmail.com",
+      "_blank"
+    );
+  }, 1000);
+});
+
+document.getElementById("fetchRepo").addEventListener("click", () => {
+  const username = "descatres"; // Replace with your GitHub username
+  const repoName = "Plants-and-Friends"; // Replace with the specific repository name
+  const repoDetails = document.getElementById("repoDetails");
+
+  // Clear existing content
+  repoDetails.innerHTML = "Loading...";
+
+  fetch(`https://api.github.com/repos/${username}/${repoName}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
+      return response.json();
+    })
+    .then((repo) => {
+      repoDetails.innerHTML = ""; // Clear 'Loading...'
+
+      const repoItem = document.createElement("div");
+      repoItem.classList.add("repo-item");
+      repoItem.innerHTML = `
+        <p>${repo.description || "No description available"}</p>
+        <p><strong>Stars:</strong> ${repo.stargazers_count}</p>
+        <p><strong>Forks:</strong> ${repo.forks_count}</p>
+      `;
+      repoDetails.appendChild(repoItem);
+    })
+    .catch((error) => {
+      repoDetails.innerHTML = `<p>Error: ${error.message}</p>`;
+    });
 });
