@@ -10,7 +10,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="./main.js"></script>
     <title>Catré's Portfolio</title>
   </head>
   <body>
@@ -18,7 +18,7 @@
       <div class="cover">
         <div class="page" id="page1">
           <div class="profile-page">
-            <img src="/assets/profile.jpg" alt="profile" />
+            <img src="./assets/profile.jpg" alt="profile" />
             <div class="content">
               <div>
                 <h1>João Catré</h1>
@@ -50,11 +50,11 @@
             </div>
             <div class="btn-box">
               <button
-                href="CV_João_Catré_v5.2.pdf"
+                href="./assets/CV_João_Catré_v5.2.pdf"
                 download
                 target="_blank"
                 type="submit"
-                onclick="window.open('CV_João_Catré_v5.2.pdf')"
+                onclick="window.open('./assets/CV_João_Catré_v5.2.pdf')"
               >
                 Download CV
               </button>
@@ -205,17 +205,11 @@
         <div class="page" id="page4">
           <div class="latest-proj-page">
             <h1>Latest Project</h1>
-            <img src="/proj-thumb.png" alt="Project" />
+            <img src="./assets/proj-thumb.png" alt="Project" />
             <div class="content">
               <div class="repo-tittle-info">
                 <h2>Plants&Friends</h2>
-                <button
-                  href="CV_João_Catré_v5.2.pdf"
-                  target="_blank"
-                  type="submit"
-                  onclick=""
-                  id="fetchRepo"
-                >
+                <button target="_blank" onclick="" id="fetchRepo">
                   More info
                 </button>
               </div>
