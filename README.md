@@ -13,10 +13,11 @@
 - ### How to run
   - Clone the repo;
   - Run `npm i` to install the dependencies;
-  - Run `npm start` to start the server;
-  - Open `localhost:3000` in your browser.
+  - Run `npm run dev` to start the server;
+  - Open `localhost:5174` in your browser.
 
 # Links
+
 https://github.com/Descatres/Descatres.github.io
 
 https://descatres.github.io/
