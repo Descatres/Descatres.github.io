@@ -63,3 +63,18 @@ function updatePage() {
 }
 
 updatePage();
+
+let touchStartX = 0;
+let touchEndX = 0;
+document.addEventListener("touchstart", (event) => {
+  touchStartX = event.changedTouches[0].screenX;
+});
+document.addEventListener("touchend", (event) => {
+  touchEndX = event.changedTouches[0].screenX;
+  if (touchStartX - touchEndX > 50) {
+    document.querySelector("#nextButton").click();
+  }
+  if (touchStartX - touchEndX < -50) {
+    document.querySelector("#prevButton").click();
+  }
+});
