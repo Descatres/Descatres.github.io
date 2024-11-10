@@ -18,14 +18,52 @@
       <div class="cover">
         <div class="page" id="page1">
           <div class="profile-page">
-            <div class="profile-inwrapper">
-              <img
-                src="/assets/profile.jpg"
-                alt="profile"
-                class="responsive-img"
-              />
-              <h1 class="responsive-text">João Catré</h1>
-              <h3 class="responsive-subtext">Software Engineer</h3>
+            <div class="content">
+              <img src="/assets/profile.jpg" alt="profile" />
+              <h1>João Catré</h1>
+              <h3>Software Engineer</h3>
+              <div class="social-media">
+                <a href="https://github.com/descatres" target="_blank">
+                  <i class="bx bxl-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/joaocatre/"
+                  target="_blank"
+                >
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+              </div>
+              <p>Hi, I'm Catré 👋</p>
+              <p>
+                I'm a passionate software engineer and I love creating software
+                that is functional, with an excellent UX and pleasant to the
+                eye. I'm always looking for new challenges and opportunities to
+                learn and grow.
+              </p>
+            </div>
+            <div class="btn-box">
+              <button
+                href="CV_João_Catré_v5.2.pdf"
+                download
+                rel="noopener noreferrer"
+                target="_blank"
+                type="submit"
+                onclick="window.open('CV_João_Catré_v5.2.pdf')"
+              >
+                Download CV
+              </button>
+              <button>Contact me</button>
+            </div>
+            <button class="nav-button" id="nextButton">&gt;</button>
+          </div>
+        </div>
+
+        <div class="page" id="page2">
+          <div class="profile-page">
+            <div class="content">
+              <img src="/assets/profile.jpg" alt="profile" />
+              <h1>João Catré</h1>
+              <h3>Software Engineer</h3>
               <div class="social-media">
                 <a href="https://github.com/descatres" target="_blank">
                   <i class="bx bxl-github"></i>
@@ -44,8 +82,7 @@
                 opportunities to learn and grow.
               </p>
             </div>
-
-            <div class="btn-box" style="margin-top: auto; margin-bottom: 3rem">
+            <div class="btn-box">
               <button
                 href="CV_João_Catré_v5.2.pdf"
                 download
@@ -53,21 +90,32 @@
                 target="_blank"
                 type="submit"
                 onclick="window.open('CV_João_Catré_v5.2.pdf')"
-                class="btn"
               >
                 Download CV
               </button>
-              <button class="btn">Contact me</button>
+              <button>Contact me</button>
             </div>
+          </div>
 
-            <button class="nav-button" id="nextButton">Next</button>
-          </div>
+          <button class="nav-button" id="nextButton">&gt;</button>
+          <button class="nav-button" id="prevButton">&lt;</button>
         </div>
+
+        <div class="page" id="page3">
+          <h2>To be continued...</h2>
+          <button class="nav-button" id="nextButton">&gt;</button>
+          <button class="nav-button" id="prevButton">&lt;</button>
+        </div>
+
+        <div class="page" id="page4">
+          <h2>To be continued1...</h2>
+          <button class="nav-button" id="nextButton">&gt;</button>
+          <button class="nav-button" id="prevButton">&lt;</button>
+        </div>
+
         <div class="page" id="page-end">
-          <div class="content">
-            <h2 class="responsive-subtext">To be continued...</h2>
-            <button class="nav-button" id="prevButton">Previous</button>
-          </div>
+          <h2>To be continued Last...</h2>
+          <button class="nav-button" id="prevButton">&lt;</button>
         </div>
       </div>
     </div>
