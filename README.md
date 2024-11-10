@@ -12,8 +12,8 @@
 
 - ### How to run
   - Clone the repo;
-  - Run `npm i` or `bun i` to install the dependencies;
-  - Run `npm start` or `bun run dev` to start the server;
+  - Run `npm i` to install the dependencies;
+  - Run `npm start` to start the server;
   - Open `localhost:3000` in your browser.
 
 # Links
