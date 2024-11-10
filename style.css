@@ -47,7 +47,8 @@ body {
 .cover {
   background: var(--cover-color);
   width: 100%;
-  max-width: 560px;
+  max-width: 600px;
+  max-height: 1000px;
   padding: 1rem;
   border-radius: 0.5rem;
   position: relative;
@@ -86,8 +87,8 @@ body {
 .page {
   width: 100%;
   height: 100%;
-  padding: 2rem;
   flex: 1;
+  padding: 2rem 2rem 4rem;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -111,13 +112,6 @@ body {
   transform-origin: right;
 }
 
-.page img {
-  width: 150px;
-  height: 150px;
-  border: 0.125rem solid var(--text-color);
-  border-radius: 100%;
-}
-
 .page h1 {
   color: var(--text-color);
 }
@@ -130,8 +124,10 @@ body {
   color: var(--secondary-text-color);
 }
 
+/* Profile Page */
+
 .profile-page {
-  padding: 7% 5% 12.5%;
+  padding: 7% 5% 5.5%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -139,21 +135,27 @@ body {
   overflow: hidden;
   overflow-y: auto;
   scrollbar-width: none;
-  gap: 6vh;
+  gap: 4vh;
+}
+
+.profile-page img {
+  width: 150px;
+  height: 150px;
+  border: 0.125rem solid var(--text-color);
+  border-radius: 100%;
+  align-self: center;
 }
 
 .profile-page .content {
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 2rem;
   max-height: 100vh;
-  /* background-color: red; */
 }
 
-/* media query to make the content have max hieght 50 vh when above 500px */
 @media screen and (min-width: 500px) {
   .profile-page .content {
     max-height: 50vh;
@@ -220,4 +222,78 @@ but I don't have any place to use it */
   transform: scale(0.98);
 }
 
-/* 27:23 */
+/* Experience Page */
+
+.experience-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  gap: 2rem;
+  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 0 0 5.5%;
+}
+
+.experience-page .content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 100vh;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 1rem;
+  border-left: 2px solid var(--primary-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -0.8rem;
+  background-color: var(--primary-color);
+  top: 0;
+  border-radius: 50%;
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.timeline-content .working-years {
+  color: var(--primary-color);
+}
+
+.timeline-content em {
+  color: var(--secondary-text-color);
+}
+
+.timeline-content b {
+  color: var(--text-color);
+}
+
+.timeline-content h3 {
+  color: var(--text-color);
+}
+
+.timeline-content h3 a {
+  color: var(--text-color);
+  text-decoration: none;
+}
