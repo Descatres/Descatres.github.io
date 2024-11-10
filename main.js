@@ -90,11 +90,10 @@ document.getElementById("contact-link").addEventListener("click", function (e) {
 });
 
 document.getElementById("fetchRepo").addEventListener("click", () => {
-  const username = "descatres"; // Replace with your GitHub username
-  const repoName = "Plants-and-Friends"; // Replace with the specific repository name
+  const username = "descatres";
+  const repoName = "Plants-and-Friends";
   const repoDetails = document.getElementById("repoDetails");
 
-  // Clear existing content
   repoDetails.innerHTML = "Loading...";
 
   fetch(`https://api.github.com/repos/${username}/${repoName}`)
@@ -105,7 +104,7 @@ document.getElementById("fetchRepo").addEventListener("click", () => {
       return response.json();
     })
     .then((repo) => {
-      repoDetails.innerHTML = ""; // Clear 'Loading...'
+      repoDetails.innerHTML = "";
 
       const repoItem = document.createElement("div");
       repoItem.classList.add("repo-item");
