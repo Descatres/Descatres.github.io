@@ -91,7 +91,7 @@ document.getElementById("contact-link").addEventListener("click", function (e) {
 
 document.getElementById("fetchRepo").addEventListener("click", () => {
   const username = "descatres";
-  const repoName = "Plants-and-Friends";
+  const repoName = "Plants-and-Friends-Mobile";
   const repoDetails = document.getElementById("repoDetails");
 
   repoDetails.innerHTML = "Loading...";
